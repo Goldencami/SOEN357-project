@@ -1,0 +1,229 @@
+#input-warning {
+    margin-bottom: 4.5em;
+}
+
+#athlete-info, #match-info {
+    margin-bottom: 3.5em;
+}
+
+#athlete-info h2, #match-info h2 {
+    margin-bottom: 1.2em;
+}
+
+#match-start {
+    margin-bottom: 2.5em;
+}
+
+#athlete-info .col-2, #match-info .col-2 {
+    text-align: end;
+}
+
+.round-container {
+    text-align: center;
+    font-weight: bold;
+    /* background-color: hsl(0, 0%, 96%); */
+}
+
+.techniques-table {
+    width: 100%;
+    text-align: center;
+    /* background-color: white; */
+}
+
+.round-number {
+    height: 34px;
+    background-color: #04AA6D;
+    color: white;
+    border-bottom: 1px solid #ddd;   
+}
+
+.stance-row {
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-row, .move-row {
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-row, .move-row:nth-child(even) {
+    /* background-color: #f2f2f2; */
+}
+
+.tracker {
+    display: inline;
+    padding: 0 20px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.substract-btn {
+    background-color: hsl(354, 70%, 54%);
+    color: white;
+    font-size: 0.80em;
+}
+
+.add-btn {
+    background-color: hsl(190, 88%, 57%);
+    color: black;
+    font-size: 0.80em;
+}
+
+.substract-btn:hover {
+    background-color: hsl(354, 70%, 44%);
+}
+
+.add-btn:hover {
+    background-color: hsl(190, 88%, 47%);
+}
+
+/* Gamjeom and intensity section */
+.intensity-gamjeom {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-top: 0.75em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    /* background-color: white; */
+    height: 50px;
+}
+
+.intensity-gamjeom select {
+    border: none;
+    outline: none;
+    /* background-color: hsla(0, 0%, 87%, 0.356); */
+    border-radius: 10px;
+    margin-left: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.intensity-gamjeom input {
+    border: none;
+    outline: none;
+    /* background-color: hsla(0, 0%, 87%, 0.356); */
+    border-radius: 10px;
+    margin-left: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100px;
+}
+
+/* Round score section with comments */
+.round-score, .points-values tr:nth-child(1) {
+    font-size: larger;
+    height: 50px;
+    text-align: center;
+}
+
+.score-table {
+    display: inline-block;
+    border-radius: 10px; 
+    background-color: hsla(0, 0%, 100%, 0.588);
+}
+
+.points-row {
+    height: 100px;
+}
+
+.points-values tr td:nth-child(1) {
+    background-color: hsl(354, 70%, 54%);
+}
+
+.points-values tr td:nth-child(2) {
+    background-color: hsla(237, 86%, 51%, 0.831);
+}
+
+.points-row input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 0.3em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 2.3em;
+}
+
+.comment-container {
+    margin-top: 5em;
+    padding-bottom: 5em;
+}
+
+.round-buttons {
+margin-bottom: 2.5em;
+}
+
+/* Summary Page */
+.scores-table, .info-table, .distribution-table {
+    width: 100%;
+    text-align: center;
+}
+
+.scores-table {
+    margin: 2.5rem auto;
+}
+
+#athlete-striking {
+    margin: 2.5rem auto;
+    /* padding-top: 3em; */
+    border-top: double rgb(117, 117, 117);
+}
+
+#athlete-striking h2 {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.scores-table thead {
+    background-color: hsl(216, 98%, 52%);
+    min-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-table thead {
+    background-color: hsl(204, 69%, 72%);
+    min-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.distribution-table thead {
+    background-color: hsl(168, 42%, 61%);
+    min-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.scores-table tr, .info-table tr, .distribution-table tr {
+    height: 40px;
+}
+
+.scores-table tbody, .info-table tbody, .distribution-table tbody {
+    /* background-color: white; */
+    border-bottom: 1px solid #ddd;
+}
+
+.all-comments {
+    margin: 3.5em auto;
+    text-align: center;
+}
+
+#print-div {
+    margin: 3em auto;
+}
+
+#convertPdf {
+    background: hsl(45, 100%, 51%);
+}
+
+#chart-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 2.5em;
+    align-items: center;
+}
+
+#exit-container {
+    margin-bottom: 2em;
+}

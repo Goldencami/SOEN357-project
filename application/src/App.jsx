@@ -1,33 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage.jsx';
+import StartPage from './pages/StartPage.jsx';
+import Tutorial from './pages/Tutorial.jsx';
+import About from './pages/About.jsx';
+import Policy from './pages/Policy.jsx';
+import Round1 from './match/Round1.jsx';
+import Round2 from './match/Round2.jsx';
+import Round3 from './match/Round3.jsx';
+import Overview from './match/Overview.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/startPage" element={<StartPage />} />
+        <Route path="/tutorial" element={<Tutorial />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/policy" element={<Policy />} />
+        
+        <Route path="/round1" element={<Round1 />} />
+        <Route path="/round2" element={<Round2 />} />
+        <Route path="/round3" element={<Round3 />} />
+        <Route path="/overview" element={<Overview />} />
+      </Routes>
+    </Router>
     </>
   )
 }

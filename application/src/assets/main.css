@@ -1,0 +1,144 @@
+@import './base.css';
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: -moz-available;
+  padding: 2em;
+}
+/* Style the scrollbar itself */
+body::-webkit-scrollbar {
+  width: 8px; /* Change width */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+  background-color: #5050503e; /* Change the color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar track (background) */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url('./wavy-lines.svg');
+  background-size: cover; */
+  user-select: none;
+  line-height: 1.5;
+}
+
+/* General and Home Page */
+#tagline {
+  margin-top: 3.5em;
+  margin-bottom: 2em;
+}
+
+#menu {
+  margin-bottom: 3.5em;
+  margin-top: 3em;
+}
+
+#policy-link {
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  display: contents;
+  width: fit-content;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus, button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#goBack-button, #goNext-button, #exitBtn {
+  font-size: 0.80em;
+}
+
+.pagesBtn {
+  margin: auto 0.75rem;
+}
+
+/* About Page */
+.context-information {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.context-information ul {
+  padding-left: 0;
+}
+
+/* Policy Page */
+#privacy-policy, #terms-of-use {
+  margin-bottom: 3em;
+}
+
+#privacy-policy {
+  text-align: center;
+}
+
+#terms-of-use p {
+  text-align: center;
+}
+
+#terms-of-use li {
+  margin-bottom: 0.75em;
+}
+
+/* @media (max-width: 720px) {
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .versions {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .tip,
+  .actions {
+    display: none;
+  }
+} */
