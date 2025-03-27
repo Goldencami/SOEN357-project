@@ -24,4 +24,5 @@ npm run dev
 ## Web server
 After starting the development server an address for the localhost will be displayed on your terminal.
 Copy that address and paste in on your browser to access the website
+
 ![Image](https://github.com/user-attachments/assets/6db56ca7-6ecb-4b6f-951e-2639c32173ef)
