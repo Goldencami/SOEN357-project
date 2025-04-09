@@ -1,29 +1,38 @@
-# SOEN357-project
+# taekwondo-app
 
-## Description
 The Taekwondo Hit Counter is a user-friendly and innovative mobile application designed specifically for Taekwondo athletes, coaches, and enthusiasts. Its primary function is to help athletes keep track of the number of times they execute specific hits or techniques during their training sessions or competitions. The Taekwondo Hit Counter aims to be a reliable training companion for Taekwondo practitioners, providing them with valuable feedback and data to enhance their performance and master their techniques over time
 
+## Recommended IDE Setup
+
+- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ## Project Setup
-Open your terminal on your IDE and write the following commands
-### Go to the application directory
-```
-cd application
-```
 
 ### Install
-``` bash
-npm install
-npm install bootstrap
-npm install react-router-dom
-npm install chart.js
- ```
-### Start development server 
-```
-npm run dev
+
+```bash
+$ npm install
+$ npm i bootstrap@5.3.3
+$ npm install react-router-dom
+$ npm install electron-store
+$ npm install chart.js
 ```
 
-## Web server
-After starting the development server, an address for the localhost will be displayed on your terminal.
-Copy that address and paste in on your browser to access the website
+### Development
 
-![Image](https://github.com/user-attachments/assets/6db56ca7-6ecb-4b6f-951e-2639c32173ef)
+```bash
+$ npm run dev
+```
+
+### Build
+
+```bash
+# For windows
+$ npm run build:win
+
+# For macOS
+$ npm run build:mac
+
+# For Linux
+$ npm run build:linux
+```
