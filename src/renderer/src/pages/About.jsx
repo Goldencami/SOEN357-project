@@ -36,31 +36,10 @@ function About() {
         </div>
 
         <div className="container context-information">
-            <h2>Acknowledgments</h2>
-            <p>This application was inspired by my Taekwondo coach, Carlos Amezcua, who identified the need for an easy and 
-                efficient way to improve the analysis of athlete by tracking points and kicks during matches. His insight 
-                and feedback played a key role in shaping the features of this app. I am grateful for his support and guidance 
-                throughout the development process.</p>
-        </div>
-
-        <div className="container context-information">
-            <h2>Contact Information</h2>
-            {/* <p>For suggestions or questions, feel free to reach out via email:{' '}
-                <a href="mailto:camila.guzman023@hotmail.com">camila.guzman023@hotmail.com</a>
-            </p>
-            <h4>Relevant profiles</h4> */}
-            <ul>
-                <li><b>Website</b>: <a href="https://camilaguzman.me">camilaguzman.me</a></li>
-                <li><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/camila-guzman023/">LinkedIn Profile</a></li>
-                {/* <li><a href="https://www.instagram.com/goldencami1/"></a>Instagram</li> */}
-            </ul>
-        </div>
-
-        <div className="container context-information">
             <h2>Version Information</h2>
             <ul>
                 <li><b>Version</b>: 1.0.0</li>
-                <li><b>Release Date</b>: February 2025</li>
+                <li><b>Release Date</b>: April 2025</li>
             </ul>
         </div>
 

@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { roundContext, buttonContext } from '../../../shared/context.jsx';
+import { lowerCaseAttack } from '../../../shared/attacks.js';
 
 function TrackContainter({ attack }) {
     const round = useContext(roundContext);
     const nextRound = useContext(buttonContext);
     // attack observing
-    const attackName = lowerCaseAttack()
+    const attackName = lowerCaseAttack(attack)
     // points states
     const [openLeft, setOpenLeft] = useState(0);
     const [openRight, setOpenRight] = useState(0);
@@ -19,7 +20,7 @@ function TrackContainter({ attack }) {
         try {
             await window.api.setPoints({ round, attack, info, points });
         } catch (error) {
-            console.error('Error saving data:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -44,28 +45,21 @@ function TrackContainter({ attack }) {
         fetchPoints();
     }, []);
 
-    function lowerCaseAttack() {
-        switch (attack) {
-            case 'ROUNDHOUSE':
-                return 'roundHouse';
-            case 'BACK KICK': 
-                return 'backKick';
-            case 'SPIN HOOK':
-                return 'spinHook';
-            default:
-                return attack.toLowerCase();
+    function addScoredPoint() {
+        if(hasScored < (openLeft + openRight + closedLeft + closedRight + trunk + head) && attackName != 'cancel') {
+            setHasScored(prevPoint => prevPoint + 1)
         }
     }
     
     useEffect(() => {
         if(nextRound) {
-            updatePoints(lowerCaseAttack(), 'open_left', openLeft);
-            updatePoints(lowerCaseAttack(), 'open_right', openRight);
-            updatePoints(lowerCaseAttack(), 'closed_left', closedLeft);
-            updatePoints(lowerCaseAttack(), 'closed_right', closedRight);
-            updatePoints(lowerCaseAttack(), 'trunk', trunk);
-            updatePoints(lowerCaseAttack(), 'head', head);
-            updatePoints(lowerCaseAttack(), 'hasScored', hasScored);
+            updatePoints(attackName, 'open_left', openLeft);
+            updatePoints(attackName, 'open_right', openRight);
+            updatePoints(attackName, 'closed_left', closedLeft);
+            updatePoints(attackName, 'closed_right', closedRight);
+            updatePoints(attackName, 'trunk', trunk);
+            updatePoints(attackName, 'head', head);
+            updatePoints(attackName, 'hasScored', hasScored);
         }
     }, [nextRound])
 
@@ -84,29 +78,29 @@ function TrackContainter({ attack }) {
                 <button className='add-btn' onClick={() => setOpenRight(prevPoint => prevPoint + 1)}>+</button>
             </td>
             <td>
-                <button className='substract-btn' onClick={() => setClosedLeft(prevPoint => prevPoint - 1)}>-</button>
+                <button className='substract-btn' onClick={() => { if(closedLeft > 0) setClosedLeft(prevPoint => prevPoint - 1)}}>-</button>
                 <p className='tracker'>{closedLeft}</p>
                 <button className='add-btn' onClick={() => setClosedLeft(prevPoint => prevPoint + 1)}>+</button>
             </td>
             <td>
-                <button className='substract-btn' onClick={() => setClosedRight(prevPoint => prevPoint - 1)}>-</button>
+                <button className='substract-btn' onClick={() => { if(closedRight > 0) setClosedRight(prevPoint => prevPoint - 1)}}>-</button>
                 <p className='tracker'>{closedRight}</p>
                 <button className='add-btn' onClick={() => setClosedRight(prevPoint => prevPoint + 1)}>+</button>
             </td>
             <td>
-                <button className='substract-btn' onClick={() => setTrunk(prevPoint => prevPoint - 1)}>-</button>
+                <button className='substract-btn' onClick={() => { if(trunk > 0) setTrunk(prevPoint => prevPoint - 1)}}>-</button>
                 <p className='tracker'>{trunk}</p>
                 <button className='add-btn' onClick={() => setTrunk(prevPoint => prevPoint + 1)}>+</button>
             </td>
             <td>
-                <button className='substract-btn' onClick={() => setHead(prevPoint => prevPoint - 1)}>-</button>
+                <button className='substract-btn' onClick={() => { if(head > 0) setHead(prevPoint => prevPoint - 1)}}>-</button>
                 <p className='tracker'>{head}</p>
                 <button className='add-btn' onClick={() => setHead(prevPoint => prevPoint + 1)}>+</button>
             </td>
             <td>
-                <button className='substract-btn' onClick={() => setHasScored(prevPoint => prevPoint - 1)}>-</button>
+                <button className='substract-btn' onClick={() => { if(hasScored > 0) setHasScored(prevPoint => prevPoint - 1)}}>-</button>
                 <p className='tracker'>{hasScored}</p>
-                <button className='add-btn' onClick={() => setHasScored(prevPoint => prevPoint + 1)}>+</button>
+                <button className='add-btn' onClick={addScoredPoint}>+</button>
             </td>
         </tr>
         </>

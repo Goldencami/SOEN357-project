@@ -23,7 +23,7 @@ function Policy() {
                 match history or user accounts. If these features are implemented, this Privacy Policy will be updated 
                 accordingly to reflect how your data is managed.</p>
             <p>If you have any questions or concerns about this policy, please contact us at {' '}
-                <a href="mailto:camila.guzman023@hotmail.com">camila.guzman023@hotmail.com</a>.</p>
+                <a href="mailto:inflUXofPengUIns@hotmail.com">inflUXofPengUIns@hotmail.com</a>.</p>
         </div>
     
         <div className='container' id='terms-of-use'>
@@ -45,7 +45,7 @@ function Policy() {
                 </li>
                 <li>
                     <strong>Contact Information:</strong> For questions, feedback, or suggestions, please reach out to{' '}
-                    <a href="mailto:camila.guzman023@hotmail.com">camila.guzman023@hotmail.com</a>.
+                    <a href="mailto:inflUXofPengUIns@hotmail.com">inflUXofPengUIns@hotmail.com</a>.
                 </li>
             </ol>
         </div> 

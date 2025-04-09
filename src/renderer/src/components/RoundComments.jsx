@@ -12,7 +12,7 @@ function RoundComments() {
                 const data = await window.api.getComments({ round });
                 setComments(data);
             } catch (error) {
-                console.error('Error fetching match data:', error);
+                console.error(error);
                 alert(error);
             }
         };
@@ -25,7 +25,7 @@ function RoundComments() {
             try {
                 await window.api.setComments({ round, comments });
             } catch (error) {
-                console.error('Error saving match data:', error);
+                console.error(error);
                 alert(error);
             }
         };

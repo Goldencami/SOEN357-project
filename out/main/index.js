@@ -102,7 +102,7 @@ electron.app.on("window-all-closed", () => {
   }
 });
 electron.ipcMain.on("set-match", (event, data) => {
-  const { athlete, opponent, competition, division, isSaved } = data;
+  const { athlete, opponent, competition, division } = data;
   matchData.athlete = athlete;
   matchData.opponent = opponent;
   matchData.competition = competition;

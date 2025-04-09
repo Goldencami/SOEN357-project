@@ -9,14 +9,9 @@ function AllPoints({ attack, data }) {
         round3 = initializeRoundData()
     } = data;
 
-    var overall = 0;
-    
-    useEffect(() => {
-        overall = 
-            round1[lowerCaseAttack(attack)].hasScored +
-            round2[lowerCaseAttack(attack)].hasScored +
-            round3[lowerCaseAttack(attack)].hasScored;
-    }, [data])
+    var overall = round1[lowerCaseAttack(attack)].hasScored +
+                    round2[lowerCaseAttack(attack)].hasScored +
+                    round3[lowerCaseAttack(attack)].hasScored;
 
     return(
         <tr className='move-row' key={attack}>

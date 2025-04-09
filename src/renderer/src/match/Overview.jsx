@@ -29,7 +29,7 @@ function Overview() {
                 navigate('/startPage'); 
             }
         } catch (error) {
-            console.error('Error fetching match data:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -66,8 +66,9 @@ function Overview() {
 
                 const opponentData = await window.api.getOppAllScores();
                 setOppScores(opponentData);
+
             } catch (error) {
-                console.error('Error fetching match data:', error);
+                console.error(error);
                 alert(error);
             }
         }
@@ -79,9 +80,6 @@ function Overview() {
         <>
         <div id='header'>
             <h1>Taekwondo Hit Counter</h1>
-            <h4>Made by Maria Camila Guzman | 
-                <a href='https://camilaguzman.me' target='_blank' rel='noopener noreferrer'> camilaguzman.me</a>
-            </h4>
         </div>
         <div id='winner-announcement'>
             <h3>WINNER OF THE {competition.toUpperCase()} COMPETITION</h3>

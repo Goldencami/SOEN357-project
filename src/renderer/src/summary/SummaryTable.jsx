@@ -21,7 +21,7 @@ function SummaryTable({ round }) {
                 const opponentScore = await window.api.getOpponentScore({ round });
                 setOppScore(opponentScore)
             } catch (error) {
-                console.error('Error fetching match data:', error);
+                console.error(error);
                 alert(error);
             }
         };

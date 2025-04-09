@@ -9,20 +9,10 @@ function StartPage() {
     const [opponent, setOpponent] = useState('');
     const [competition, setCompetition] = useState('');
     const [division, setDivison] = useState('');
-    const [isSaved, setIsSaved] = useState({ athleteData: false, opponentData: false })
-
-    function saveAthlteData(e) {
-        setIsSaved(prevSave => ({ ...prevSave, athleteData: e.target.checked}));
-    }
-
-    function saveOpponentData(e) {
-        setIsSaved(prevSave => ({ ...prevSave, opponentData: e.target.checked}));
-    }
 
     async function postData() {
         try {
-            // console.log(isSaved)
-            await window.api.setMatchData({ athlete, opponent, competition, division, isSaved });
+            await window.api.setMatchData({ athlete, opponent, competition, division });
         } catch (error) {
             console.error('Error saving match data:', error);
             alert(error);
@@ -40,7 +30,7 @@ function StartPage() {
                 alert('You cannot start the analysis without filling everything!')
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -77,19 +67,6 @@ function StartPage() {
                     <input id="opponent-input" value={opponent} onChange={(e) => setOpponent(e.target.value)} type="text" placeholder="Opponent's Name"/>
                 </div>
             </div>
-
-            {/* <div className='row athlete-checkbox'>
-                <div className="col-2"></div>
-                <div className="col">
-                    <input type="checkbox" id="save-athlete" onClick={(e) => saveAthlteData(e)} name="save-athlete" value="athlete"/>
-                    <label htmlFor="save-athlete">Save Athlete</label>
-                </div>
-                <div className="col-2"></div>
-                <div className="col">
-                    <input type="checkbox" id="save-opponent" onClick={(e) => saveOpponentData(e)} name="save-opponent" value="opponent"/>
-                    <label htmlFor="save-opponent">Save Opponent</label>
-                </div>
-            </div> */}
         </div>
         
         <div className="container" id='match-info'>

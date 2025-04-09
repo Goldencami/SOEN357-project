@@ -16,7 +16,7 @@ function ScoreBoard() {
         try {
             await window.api.setRoundInfo({ round, intensity, gamjeoms });
         } catch (error) {
-            console.error('Error saving match data:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -25,7 +25,7 @@ function ScoreBoard() {
         try {
             await window.api.setAthleteScore({ round, athletePoints });
         } catch (error) {
-            console.error('Error saving match data:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -34,7 +34,7 @@ function ScoreBoard() {
         try {
             await window.api.setOpponentScore({ round, opponentPoints });
         } catch (error) {
-            console.error('Error saving match data:', error);
+            console.error(error);
             alert(error);
         }
     }
@@ -57,7 +57,7 @@ function ScoreBoard() {
                 const opponentScore = await window.api.getOpponentScore({ round });
                 setOpponentPoints(opponentScore);
             } catch (error) {
-                console.error('Error fetching match data:', error);
+                console.error(error);
                 alert(error);
             }
         };

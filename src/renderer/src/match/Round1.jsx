@@ -18,35 +18,32 @@ function Round1() {
         <>
         <roundContext.Provider value={1}>
             <buttonContext.Provider value={isClicked}>
-                <div className='container-fluid round-container'>
-                    <div className="goBack-container container">
-                        <div className="row">
-                            <div className="col">
-                                <Link to="/">
-                                    <button 
-                                        id='goBack-button'
-                                        style={{
-                                            position: 'absolute',
-                                            left: '10px',
-                                            top: '10px'
-                                        }}>
-                                            &#60; Exit
-                                    </button>
-                                </Link>
-                            </div>
-                            <div className="col"></div>
-                            <div className="col"></div>
-                        </div>
-                    </div>
-                    <TableContainer />
-                </div>
+                <TableContainer />
                 <ScoreBoard />
                 <RoundComments />
             </buttonContext.Provider>
         </roundContext.Provider>
 
         <div className='round-buttons'>
-            <Link to='/round2'><button id="goNext-button" onClick={nextPage}>Round 2 &gt;</button></Link>
+            <Link to='/'>
+                <button 
+                    id="goBack-button"
+                    style={{
+                        marginRight: '10rem'
+                    }}>
+                        &#60; Exit
+                </button>
+            </Link>
+            <Link to='/round2'>
+                <button 
+                    id='goNext-button'
+                    onClick={nextPage}
+                    style={{
+                        marginLeft: '10rem'
+                    }}>
+                    Round 2 &gt;
+                </button>
+            </Link>
         </div>
         
         <Copyright />
