@@ -12,7 +12,6 @@ function AllPoints({ attack, data }) {
     var overall = 0;
     
     useEffect(() => {
-        // Calculates the total amount of times a hit was executed throughout the competition
         overall = 
             round1[lowerCaseAttack(attack)].hasScored +
             round2[lowerCaseAttack(attack)].hasScored +
@@ -20,7 +19,6 @@ function AllPoints({ attack, data }) {
     }, [data])
 
     return(
-        // row displaying how many times a hit was succesfully scored in a round
         <tr className='move-row' key={attack}>
             <td>{attack}</td>
             <td>{round1[lowerCaseAttack(attack)].hasScored}</td>
