@@ -9,7 +9,6 @@ import '../assets/match.css'
 function Round1() {
     const [isClicked, setIsClicked] = useState(false);
 
-    // when clicking button to go to next page, notify TableContainer, ScoreBoard and RoundComments to save their data
     function nextPage() {
         setIsClicked(prev => !prev);
     }

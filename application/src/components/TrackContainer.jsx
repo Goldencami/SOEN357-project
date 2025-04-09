@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { roundContext, buttonContext } from '../../shared/context.jsx';
-import { lowerCaseAttack } from '../../shared/attacks.js';
 
 function TrackContainter({ attack }) {
-    const round = useContext(roundContext); // use this to get the points of the kick we're traking for round #
+    const round = useContext(roundContext);
     const nextRound = useContext(buttonContext);
     // attack observing
-    const attackName = lowerCaseAttack(attack)
-    // points states, THIS IS THE 'info' USED IN FCT updatePoints
+    const attackName = lowerCaseAttack()
+    // points states
     const [openLeft, setOpenLeft] = useState(0);
     const [openRight, setOpenRight] = useState(0);
     const [closedLeft, setClosedLeft] = useState(0);
@@ -16,7 +15,7 @@ function TrackContainter({ attack }) {
     const [head, setHead] = useState(0);
     const [hasScored, setHasScored] = useState(0);
 
-    async function updatePoints(attack, info, points) { // info is the points state, look up ↑
+    async function updatePoints(attack, info, points) {
         try {
             // Post points in server
         } catch (error) {
@@ -38,15 +37,28 @@ function TrackContainter({ attack }) {
         fetchPoints();
     }, []);
 
+    function lowerCaseAttack() {
+        switch (attack) {
+            case 'ROUNDHOUSE':
+                return 'roundHouse';
+            case 'BACK KICK': 
+                return 'backKick';
+            case 'SPIN HOOK':
+                return 'spinHook';
+            default:
+                return attack.toLowerCase();
+        }
+    }
+    
     useEffect(() => {
         if(nextRound) {
-            updatePoints(lowerCaseAttack(attack), 'open_left', openLeft);
-            updatePoints(lowerCaseAttack(attack), 'open_right', openRight);
-            updatePoints(lowerCaseAttack(attack), 'closed_left', closedLeft);
-            updatePoints(lowerCaseAttack(attack), 'closed_right', closedRight);
-            updatePoints(lowerCaseAttack(attack), 'trunk', trunk);
-            updatePoints(lowerCaseAttack(attack), 'head', head);
-            updatePoints(lowerCaseAttack(attack), 'hasScored', hasScored);
+            updatePoints(lowerCaseAttack(), 'open_left', openLeft);
+            updatePoints(lowerCaseAttack(), 'open_right', openRight);
+            updatePoints(lowerCaseAttack(), 'closed_left', closedLeft);
+            updatePoints(lowerCaseAttack(), 'closed_right', closedRight);
+            updatePoints(lowerCaseAttack(), 'trunk', trunk);
+            updatePoints(lowerCaseAttack(), 'head', head);
+            updatePoints(lowerCaseAttack(), 'hasScored', hasScored);
         }
     }, [nextRound])
 
