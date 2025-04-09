@@ -5,8 +5,8 @@ import ScoresSummary from './ScoresSummary.jsx';
 import { attacks, lowerCaseAttack } from '../../shared/attacks.js';
 
 function SummaryTable({ round }) {
-    const [data, setData] = useState({});
-    const [matchData, setMatchData] = useState({});
+    const [data, setData] = useState({}); // Round's tracking points, scores, comments, etc
+    const [matchData, setMatchData] = useState({}); // Match's info: athlete's name, opponent's name, competition and division
     const [oppScore, setOppScore] = useState(0);
 
     useEffect(() => {
