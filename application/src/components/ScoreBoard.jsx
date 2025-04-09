@@ -2,12 +2,11 @@ import React, { useState, useEffect, useContext } from 'react';
 import { roundContext, buttonContext } from '../../shared/context.jsx';
 
 function ScoreBoard() {
-    const round = useContext(roundContext); // use this to get the round's score
-    const nextRound = useContext(buttonContext); // use this to know when its time to save data
+    const round = useContext(roundContext);
+    const nextRound = useContext(buttonContext);
     // State for athlete and opponent names
     const [athlete, setAthlete] = useState(null);
     const [opponent, setOpponent] = useState(null);
-    
     const [athletePoints, setAthletePoints] = useState(0);
     const [opponentPoints, setOpponentPoints] = useState(0);
     const [intensity, setIntensity] = useState(0);

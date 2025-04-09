@@ -2,14 +2,14 @@ import React, { useState, useEffect, useContext } from 'react';
 import { roundContext } from '../../shared/context.jsx';
 
 function RoundComments() {
-    const round = useContext(roundContext); // use this to get the round's # to fetch comments
+    const round = useContext(roundContext);
     const [comments, setComments] = useState('');
 
     // get comments from session storage
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                // Fetch data from server, use setComments
+                // Fetch data from server
             } catch (error) {
                 console.error('Error fetching match data:', error);
                 alert(`Error: ${error}`);

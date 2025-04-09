@@ -1,5 +1,4 @@
 function TrackerSummary({ attack, data }) {
-    // Kick stance, left/right leg, target and did it scored
     const {
         open_left = 0,
         open_right = 0,
