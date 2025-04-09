@@ -1,5 +1,5 @@
 function ScoresSummary({ data, matchData, oppScore }) {
-    const { totalScore, intensity, gamjeoms } = data; // gamjeoms is a penalty, it gives the opponent +1 point🤡
+    const { totalScore, intensity, gamjeoms } = data;
     const { athlete, opponent } = matchData;
 
     return(

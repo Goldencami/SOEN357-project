@@ -16,7 +16,6 @@ function DistributionTable({ data }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* For each attack, show how many times it was scored in each round and the total amount of it */}
                     {attacks.map((attack) => (
                         <AllPoints
                             key={attack}

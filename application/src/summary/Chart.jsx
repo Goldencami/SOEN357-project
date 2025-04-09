@@ -77,7 +77,7 @@ function Chart({ data }) {
                 chartInstanceRef.current = null;
             }
         };
-    }, [data]); // Re-run when 'data' changes
+    }, [data]); // Re-run when `data` changes
 
     return (
         <div className='container' id='chart-container'>
