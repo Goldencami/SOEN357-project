@@ -124,9 +124,15 @@ button:focus, button:focus-visible {
   margin-bottom: 0.75em;
 }
 
-.tutorial-img {
-  align-items: center;
-  width: 400px;
+.container-img {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.container-img img {
+  margin-top: 1em;
+  width: 900px;
 }
 
 /* @media (max-width: 720px) {

@@ -29,19 +29,19 @@ function Tutorial() {
         </div>
 
         <div>
-            <div className='container tutorial-img'>
-                <h2>Use to keep track of your athelte's hits for each round</h2>
-                <img src={round_table} height={500} alt='form' />
+            <div className='container container-img'>
+                <h2>1. Use it to keep track of your athelte's hits for each round</h2>
+                <img src={round_table} alt='form' />
             </div>
-            <div className='container tutorial-img'>
-                <h2>Get your results at the end of the analysis!</h2>
-                <img src={overall_results} height={500} alt='form' />
-                <img src={overall_scores} height={500} alt='form' />
+            <div className='container container-img'>
+                <h2>2. Get your results at the end of the analysis!</h2>
+                <img src={overall_results} alt='form' />
+                <img src={overall_scores} alt='form' />
             </div>
-            <div className='container tutorial-img'>
-                <h2>Get your feedback based on the hit scored successfully!</h2>
+            <div className='container container-img'>
+                <h2>3. Get your feedback based on the hit scored successfully!</h2>
                 <h3>Download your analysis with a simple click!</h3>
-                <img src={chart} height={500} alt='form' />
+                <img src={chart} alt='form' />
             </div>
         </div>
         <Copyright />
