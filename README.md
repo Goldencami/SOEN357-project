@@ -14,6 +14,7 @@ The Taekwondo Hit Counter is a user-friendly and innovative mobile application d
 $ npm install
 $ npm i bootstrap@5.3.3
 $ npm install react-router-dom
+$ npm install sweetalert2
 $ npm install electron-store
 $ npm install chart.js
 ```

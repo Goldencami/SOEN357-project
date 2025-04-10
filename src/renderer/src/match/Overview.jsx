@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import SummaryTable from '../summary/SummaryTable.jsx';
 import DistributionTable from '../summary/DistributionTable.jsx';
 import Chart from '../summary/Chart.jsx';
@@ -30,7 +31,11 @@ function Overview() {
             }
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 
@@ -69,7 +74,11 @@ function Overview() {
 
             } catch (error) {
                 console.error(error);
-                alert(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         }
 

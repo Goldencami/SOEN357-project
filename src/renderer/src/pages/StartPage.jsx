@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import Copyright from '../components/Copyright.jsx'
 
 function StartPage() {
@@ -14,8 +15,12 @@ function StartPage() {
         try {
             await window.api.setMatchData({ athlete, opponent, competition, division });
         } catch (error) {
-            console.error('Error saving match data:', error);
-            alert(error);
+            console.error(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'There was a problem saving the match data!',
+            });
         }
     }
     
@@ -27,11 +32,19 @@ function StartPage() {
                 navigate('/round1');  
             }
             else {
-                alert('You cannot start the analysis without filling everything!')
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Incomplete Form',
+                    text: 'You cannot start the analysis without filling everything!',
+                });
             }
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 

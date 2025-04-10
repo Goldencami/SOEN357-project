@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { roundContext, buttonContext } from '../../../shared/context.jsx';
+import Swal from 'sweetalert2';
 
 function ScoreBoard() {
     const round = useContext(roundContext);
@@ -17,7 +18,11 @@ function ScoreBoard() {
             await window.api.setRoundInfo({ round, intensity, gamjeoms });
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 
@@ -26,7 +31,11 @@ function ScoreBoard() {
             await window.api.setAthleteScore({ round, athletePoints });
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 
@@ -35,7 +44,11 @@ function ScoreBoard() {
             await window.api.setOpponentScore({ round, opponentPoints });
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 
@@ -58,7 +71,11 @@ function ScoreBoard() {
                 setOpponentPoints(opponentScore);
             } catch (error) {
                 console.error(error);
-                alert(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         };
         

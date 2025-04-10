@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import Swal from 'sweetalert2';
 import { roundContext } from '../../../shared/context.jsx';
 
 function RoundComments() {
@@ -13,7 +14,11 @@ function RoundComments() {
                 setComments(data);
             } catch (error) {
                 console.error(error);
-                alert(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         };
         
@@ -26,7 +31,11 @@ function RoundComments() {
                 await window.api.setComments({ round, comments });
             } catch (error) {
                 console.error(error);
-                alert(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { roundContext, buttonContext } from '../../../shared/context.jsx';
 import { lowerCaseAttack } from '../../../shared/attacks.js';
+import Swal from 'sweetalert2';
 
 function TrackContainter({ attack }) {
     const round = useContext(roundContext);
@@ -21,7 +22,11 @@ function TrackContainter({ attack }) {
             await window.api.setPoints({ round, attack, info, points });
         } catch (error) {
             console.error(error);
-            alert(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+            });
         }
     }
 
@@ -37,8 +42,12 @@ function TrackContainter({ attack }) {
                 setHead(data[attackName].head);
                 setHasScored(data[attackName].hasScored);
             } catch (error) {
-                console.error('Error fetching match data:', error);
-                alert(error);
+                console.error(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         };
 

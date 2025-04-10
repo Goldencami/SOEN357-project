@@ -22,7 +22,11 @@ function SummaryTable({ round }) {
                 setOppScore(opponentScore)
             } catch (error) {
                 console.error(error);
-                alert(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong. Please try again.',
+                });
             }
         };
 
