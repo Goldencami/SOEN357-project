@@ -24,8 +24,17 @@ function Overview() {
 
     async function handleExit() {
         try {
-            const confirmExit = window.confirm("Are you sure you want to exit this page?");
-            if (confirmExit) {
+            const result = await Swal.fire({
+                icon: 'question',
+                title: 'Exit Overview',
+                text: 'Are you sure you want to exit this page?',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, exit',
+                cancelButtonText: 'Cancel',
+                reverseButtons: true
+            });
+
+            if (result.isConfirmed) {
                 await window.api.resetData();
                 navigate('/startPage'); 
             }
