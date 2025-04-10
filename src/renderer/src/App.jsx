@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import StartPage from './pages/StartPage.jsx';
+import Tutorial from './pages/Tutorial.jsx';
 import About from './pages/About.jsx';
 import Policy from './pages/Policy.jsx';
 import Round1 from './match/Round1.jsx';
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/startPage" element={<StartPage />} />
+        <Route path="/tutorial" element={<Tutorial />} />
         <Route path="/about" element={<About />} />
         <Route path="/policy" element={<Policy />} />
         

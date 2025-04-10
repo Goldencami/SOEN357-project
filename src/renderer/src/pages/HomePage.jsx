@@ -17,6 +17,7 @@ function HomePage() {
 
         <div id='menu'>
             <Link to="/startPage"><button className='pagesBtn'>Start</button></Link>
+            <Link to="/tutorial"><button className='pagesBtn'>Tutorial</button></Link>
             <Link to="/about"><button className='pagesBtn'>About</button></Link>
         </div>
 
