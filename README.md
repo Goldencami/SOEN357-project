@@ -7,6 +7,7 @@ The Taekwondo Hit Counter is a user-friendly and innovative mobile application d
 ## Project Setup
 
 ### Install
+Make sure you have Node.js installed on your device
 
 ```bash
 $ npm install
