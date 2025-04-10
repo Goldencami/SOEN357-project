@@ -24,7 +24,7 @@ $ npm install chart.js
 $ npm run dev
 ```
 
-### Build native desktop app
+## Build native desktop app
 If you're interested in building the application for desktop run the following commands. Make sure you have installed all the dependencies.
 
 ```bash
