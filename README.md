@@ -1,4 +1,4 @@
-# taekwondo-app
+# Taekwondo Hit Counter App
 
 The Taekwondo Hit Counter is a user-friendly and innovative mobile application designed specifically for Taekwondo athletes, coaches, and enthusiasts. Its primary function is to help athletes keep track of the number of times they execute specific hits or techniques during their training sessions or competitions. The Taekwondo Hit Counter aims to be a reliable training companion for Taekwondo practitioners, providing them with valuable feedback and data to enhance their performance and master their techniques over time
 
@@ -24,9 +24,12 @@ $ npm install chart.js
 $ npm run dev
 ```
 
-### Build
+### Build native desktop app
+If you're interested in building the application for desktop run the following commands
 
 ```bash
+$ npm run build
+
 # For windows
 $ npm run build:win
 

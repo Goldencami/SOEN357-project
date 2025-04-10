@@ -1,10 +1,9 @@
 {
-  "name": "taekwondo-app",
+  "name": "taekwondo-hit-counter-app",
   "version": "1.0.0",
   "description": "An Electron application with React to track Taekwondo hits",
   "main": "./out/main/index.js",
-  "author": "Maria Camila Guzman camila.guzman023@gmail.com",
-  "homepage": "https://camilaguzman.me/",
+  "author": "inflUX of PengUIns inflUXofPengUIns@gmail.com",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
@@ -41,7 +40,7 @@
     "vite": "^6.2.5"
   },
   "build": {
-    "appId": "com.camilaguzman.taekwondoapp",
+    "appId": "com.inflUXofPengUIns.taekwondoapp",
     "productName": "Taekwondo App",
     "directories": {
       "buildResources": "src/icons"
@@ -52,6 +51,14 @@
         "nsis",
         "portable"
       ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Taekwondo App"
     },
     "mac": {
       "icon": "src/icons/icon.icns",
